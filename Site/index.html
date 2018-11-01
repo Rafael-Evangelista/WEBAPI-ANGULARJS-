@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html ng-app="funcionarios">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="container" ng-controller="funcionarioCtrl">
+        <div class="panel panel-info">
+            <div class="panel-heading text-xl-center badge-dark">Listagem de Funcionários </div>
+
+            <table class="table table-bordered">
+                <thead style="background-color: burlywood;">
+                    <tr>
+                        <th>ID Funcionário</th>
+                        <th>Nome</th>
+                        <th>Cargo</th>
+                        <th>Departamento</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr ng-repeat=" func in Funcionarios">
+                        <td>{{func.Id}}</td>
+                        <td>{{func.Nome}}</td>
+                        <td>{{func.Cargo}}</td>
+                        <td>{{func.Departamento}}</td>
+                        <td>{{func.Email}}</td>
+                        <td style="width: 200px">
+                            <a href="#" class="btn btn-info">Atualizar</a>
+                            <a href="#" class="btn btn-danger">Excluir</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-3.0.0.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
+    <!--AngulaJS-->
+    <script src="App/Funcionario/Module.js"></script>
+    <script src="App/Funcionario/FuncionarioService.js"></script>
+    <script src="App/Funcionario/FuncionarioController.js"></script>
+
+
+</body>
+</html>
